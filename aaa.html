@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+    .video{
+      margin: 0 auto;
+      width: 320px;
+      height:290px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="main">
+  <img src="./images/u=1576788186,4000013657&fm=27&gp=0%20(1).jpg" alt="">
+</div>
+
+
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script><!--jQuery文件-->
+<script>
+  var body = document.getElementById('main');
+  function addElement(){
+    body.innerHTML = '<video class="video" controls style="z-index: 100;" id="video" autoplay>\n' +
+      '  <source src="./mp4/国产优秀感人爱情动画短片《我们的世界》_腾讯视频.mp4" type="video/mp4">\n' +
+      '</video>'
+  }
+  setTimeout("addElement()",3000);
+  setTimeout(function () {
+    console.log($(".video"))
+  },3000)
+</script>
+</body>
+</html>
